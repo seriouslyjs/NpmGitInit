@@ -2,39 +2,38 @@
 
 ## Description
 
-🛠️ **NpmGitInit** is your magic wand for Node.js project setups! Serving as a nifty hook for `npm`, `yarn`, and `pnpm`, this shell script turbocharges your project initialization. It's like having a personal assistant for setting up GitHub repositories, tailored for Node.js enthusiasts.
+🛠️ **NpmGitInit** is your magic wand for Node.js project setups! It serves as a nifty hook for `npm`, `yarn`, and `pnpm`, turbocharging your project initialization. It's like having a personal assistant for setting up GitHub repositories, perfect for Node.js enthusiasts.
 
-🌐 Integrating repository creation and configuration seamlessly into your `init` command, **NpmGitInit** transforms the mundane into the extraordinary! Whether you're a fan of `npm`, `yarn`, or `pnpm`, this script has got your back, ensuring a smooth, automated setup for your next big Node.js adventure.
+🌐 Seamlessly integrate repository creation and configuration into your `init` command with **NpmGitInit**. Transform the mundane into the extraordinary! Whether you prefer `npm`, `yarn`, or `pnpm`, this script has got your back, ensuring a smooth, automated setup for your Node.js adventure.
 
-🔍 Seeking an `npm init hook`? Need to bypass the usual `npm init` drill? Or hunting for something similar for `yarn` and `pnpm`? Look no further, **NpmGitInit** is here to jazz up your workflow!
-
+🔍 Need an `npm init hook`? Want to bypass the usual `npm init` drill? Or searching for something similar for `yarn` and `pnpm`? Look no further, **NpmGitInit** is here to jazz up your workflow!
 
 ## Features
 
-- **Automated GitHub Repository Creation**: Simplifies the setup of a GitHub repository as part of the init process for `npm`, `yarn`, and `pnpm`.
-- **Universal Init Hook**: Intercepts the `init` command across `npm`, `yarn`, and `pnpm`, adding powerful, automated functionality.
-- **Project Directory Initialization**: Seamlessly blends the init process with GitHub, setting up your project directory along with a new repository.
-- **Custom GitHub Organization Selection**: Enables selection of a GitHub organization during initialization, defaulting to your personal account if none is chosen.
-- **Enhanced Initialization Process**: Transforms the standard `npm init`, `yarn init`, or `pnpm init` with added automation for Git and GitHub setup.
+- **Automated GitHub Repository Creation**: Simplify GitHub repository setup for `npm`, `yarn`, and `pnpm`.
+- **Universal Init Hook**: Automate the `init` command across `npm`, `yarn`, and `pnpm`.
+- **Project Directory Initialization**: Set up your project directory along with a new repository.
+- **Custom GitHub Organization Selection**: Choose a GitHub organization during initialization.
+- **Enhanced Initialization Process**: Automate Git and GitHub setup for `npm init`, `yarn init`, or `pnpm init`.
 
 ## Getting Started
 
 ### Prerequisites
 
-- [Git](https://git-scm.com/book/en/v2/Getting-Started-Installing-Git) installed and configured on your system.
+- [Git](https://git-scm.com/book/en/v2/Getting-Started-Installing-Git) installed and configured.
 - [GitHub CLI](https://cli.github.com/manual/installation) installed and authenticated.
 - [`jq`](https://stedolan.github.io/jq/download/) command-line JSON processor installed.
-- A GitHub account for repository creation and management. [Sign up here](https://github.com/join) if you don't have one.
+- [GitHub account](https://github.com/join) for repository creation and management.
 
 ### Installation
 
-Execute the following command in your terminal to install:
+Run this command in your terminal to install:
 
 ```bash
 curl -sSL https://raw.githubusercontent.com/seriouslyjs/NpmGitInit/master/install.sh | bash
 ```
 
-This command will download and execute the `install.sh` script, which in turn will set up `node-init-wrapper.sh` and the required aliases.
+This command downloads and executes the `install.sh` script, setting up `node-init-wrapper.sh` and the required aliases.
 
 ### Usage
 
@@ -56,30 +55,30 @@ Or with pnpm:
 pnpm init
 ```
 
-Then follow the interactive prompts to select an organization and configure your repository.
+Follow the interactive prompts to select an organization and configure your repository.
 
 ## How It Works
 
-The `node-init-wrapper.sh` script is designed to streamline the process of setting up a new Node.js project by automating several steps that are typically done manually. **The script only cares if you call `init`** and returns early if not. Here's an overview of what happens behind the scenes when you run the script:
+The `node-init-wrapper.sh` script streamlines the process of setting up a new Node.js project by automating several steps. **The script only cares if you call `init`** and returns early if not. Here's an overview of what happens behind the scenes:
 
 ### Detecting the Current Folder
 
-- When you execute `npm init`, `yarn init`, or `pnpm init`, the script first detects the name of the current working directory. This name is used to create a new GitHub repository, assuming that your project's name will be the same as the folder's name.
+- When you execute `npm init`, `yarn init`, or `pnpm init`, the script detects the name of the current working directory. This name is used to create a new GitHub repository.
 
 ### Creating a GitHub Repository
 
-- The script then prompts you to choose a GitHub organization for the new repository. It fetches the list of organizations you are a part of using the GitHub CLI and presents them as options.
+- The script prompts you to choose a GitHub organization for the new repository. It presents the list of organizations you are a part of using the GitHub CLI.
 - If you don't choose an organization, it defaults to creating the repository under your personal GitHub account.
 - The repository is created with the name matching your current directory and is set to private by default.
 
 ### Cloning the Repository
 
 - After creating the GitHub repository, the script clones it into your current working directory. This sets up a Git remote named `origin` pointing to your new GitHub repository.
-- This step ensures that your local directory and the GitHub repository are linked, making it ready for version control and collaboration.
+- This step links your local directory and the GitHub repository, ready for version control and collaboration.
 
 ### Running the Original Init Command
 
-- The script then executes the original `npm init`, `yarn init`, or `pnpm init` command. This step initializes your project as a Node.js project, creating a `package.json` file with the necessary details.
+- The script executes the original `npm init`, `yarn init`, or `pnpm init` command. This initializes your project as a Node.js project, creating a `package.json` file.
 - You'll be prompted with the usual questions by `npm`, `yarn`, or `pnpm` to configure your `package.json`.
 
 ### Staging and Committing
@@ -88,8 +87,8 @@ The `node-init-wrapper.sh` script is designed to streamline the process of setti
 
 ### Transparency and Control
 
-- By automating these steps, `node-init-wrapper.sh` saves time and reduces the repetitive tasks typically associated with starting a new Node.js project.
-- The script is open source, allowing you to review, modify, and extend it as you see fit. This transparency ensures you have full control over what happens in your development environment.
+- By automating these steps, `node-init-wrapper.sh` saves time and reduces repetitive tasks when starting a new Node.js project.
+- The script is open source, allowing you to review, modify, and extend it as you see fit. This transparency ensures full control over what happens in your development environment.
 
 ## Ideal for
 
@@ -104,7 +103,7 @@ Beyond the basic setup, you can further customize and enhance your Node.js proje
 
 ### Setting Npm Defaults
 
-Using `npm set`, you can define default values for your `npm init` process. This can save time and ensure consistency across projects. For example:
+Using `npm set`, define default values for your `npm init` process. This saves time and ensures consistency across projects. For example:
 
 - Set your default author name and email:
 
