@@ -26,7 +26,7 @@ NpmGitInit is a powerful shell script designed to streamline the process of init
 Execute the following command in your terminal to install:
 
 ```bash
-curl -sSL https://raw.githubusercontent.com/seriouslyjs/NpmGitInit/main/install.sh | bash
+curl -sSL https://raw.githubusercontent.com/seriouslyjs/NpmGitInit/master/install.sh | bash
 ```
 
 This command will download and execute the `install.sh` script, which in turn will set up `node-init-wrapper.sh` and the required aliases.
