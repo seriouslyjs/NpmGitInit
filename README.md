@@ -4,9 +4,9 @@
 
 🛠️ **NpmGitInit** is your magic wand for Node.js project setups! It serves as a nifty hook for `npm`, `yarn`, and `pnpm`, turbocharging your project initialization. It's like having a personal assistant for setting up GitHub repositories, perfect for Node.js enthusiasts.
 
-🌐 Seamlessly integrate repository creation and configuration into your `init` command with **NpmGitInit**. Transform the mundane into the extraordinary! Whether you prefer `npm`, `yarn`, or `pnpm`, this script has got your back, ensuring a smooth, automated setup for your Node.js adventure.
+🌐 Seamlessly integrate repository creation and configuration into your `init` command. Transform the mundane into automation! Whether you prefer `npm`, `yarn`, or `pnpm`, this script has got your back, ensuring a smooth, automated setup for your Node.js projects.
 
-🔍 Need an `npm init hook`? Want to bypass the usual `npm init` drill? Or searching for something similar for `yarn` and `pnpm`? Look no further, **NpmGitInit** is here to jazz up your workflow!
+🔍 Need an `npm init hook`? Want to bypass the usual `npm init` drill? Or searching for something similar for `yarn` and `pnpm`? Here you go...
 
 ## Features
 
@@ -33,7 +33,7 @@ Run this command in your terminal to install:
 curl -sSL https://raw.githubusercontent.com/seriouslyjs/NpmGitInit/master/install.sh | bash
 ```
 
-This command downloads and executes the `install.sh` script, setting up `node-init-wrapper.sh` and the required aliases.
+Or feel free to look at the script yourself and see ho it works. This command downloads and executes the `install.sh` script, setting up `node-init-wrapper.sh` and the required aliases.
 
 
 ### Usage
@@ -42,17 +42,11 @@ Initiate a new Node.js project using:
 
 ```bash
 npm init
-```
 
-Or with yarn:
-
-```bash
+#Or with yarn:
 yarn init
-```
 
-Or with pnpm:
-
-```bash
+#Or with pnpm:
 pnpm init
 ```
 
@@ -94,7 +88,7 @@ The `node-init-wrapper.sh` script streamlines the process of setting up a new No
 ## Ideal for
 
 - Node.js developers using `npm`, `yarn`, or `pnpm` for project management.
-- Those looking to automate the link between `npm init`, `yarn init`, or `pnpm init` and GitHub repository creation.
+- Those looking to automate the link between `npm | yarn | pnpm init` and GitHub repository creation.
 - Users seeking an extended functionality hook for any of these package managers.
 - Developers aiming to streamline their initial project setup process in Node.js.
 
