@@ -32,6 +32,7 @@ chmod +x "$INSTALL_DIR/$SCRIPT_NAME"
 if [ "$SHELL" = "*/fish" ]; then
     # Fish shell syntax for alias
     if ! grep -q "function npm;" "$ALIAS_FILE"; then
+        echo "\n"
         echo "function npm; $INSTALL_DIR/$SCRIPT_NAME npm \$argv; end" >> "$ALIAS_FILE"
         echo "function yarn; $INSTALL_DIR/$SCRIPT_NAME yarn \$argv; end" >> "$ALIAS_FILE"
         echo "function pnpm; $INSTALL_DIR/$SCRIPT_NAME pnpm \$argv; end" >> "$ALIAS_FILE"
@@ -39,6 +40,7 @@ if [ "$SHELL" = "*/fish" ]; then
 else
     # Bash/Zsh syntax for alias
     if ! grep -q "alias npm=" "$ALIAS_FILE"; then
+        echo "\n"
         echo "alias npm=\"$INSTALL_DIR/$SCRIPT_NAME npm\"" >> "$ALIAS_FILE"
         echo "alias yarn=\"$INSTALL_DIR/$SCRIPT_NAME yarn\"" >> "$ALIAS_FILE"
         echo "alias pnpm=\"$INSTALL_DIR/$SCRIPT_NAME pnpm\"" >> "$ALIAS_FILE"
