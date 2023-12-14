@@ -35,6 +35,7 @@ curl -sSL https://raw.githubusercontent.com/seriouslyjs/NpmGitInit/master/instal
 
 This command downloads and executes the `install.sh` script, setting up `node-init-wrapper.sh` and the required aliases.
 
+
 ### Usage
 
 Initiate a new Node.js project using:
@@ -120,6 +121,7 @@ Using `npm set`, define default values for your `npm init` process. This saves t
   ```
 
 These defaults will be used every time you run `npm|yarn|pnpm init`, streamlining the process.
+
 
 ## Contributing
 

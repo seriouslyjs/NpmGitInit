@@ -2,6 +2,7 @@
 
 # Download and store the script
 SCRIPT_URL="https://raw.githubusercontent.com/seriouslyjs/NpmGitInit/master/node-init-wrapper.sh"
+
 INSTALL_DIR="$HOME"
 SCRIPT_NAME="node-init-wrapper.sh"
 
